@@ -16,7 +16,7 @@ console.log("Amenitites",amenities);
             {amenities.map((am: any) => {
               return (
                   <div className="block">
-                    <div className="block-content">
+                    <div className="block-content amenitites-block">
                       <div className="icon">
                         <img src={am?.icon?.url} alt="" title="" />
                       </div>

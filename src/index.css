@@ -1351,6 +1351,7 @@ nhs_pre
   @apply first:pr-2.5;
 }
 
+
  /* 12/01/2023  css changes  */
 
 .search-dropdown .options > div > div{
@@ -1363,3 +1364,8 @@ nhs_pre
  @apply mb-0.5;
 } */
 
+/* CSS Added  20/03/2023 */
+
+.amenitites-block{
+  @apply text-ellipsis;
+}
