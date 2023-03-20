@@ -621,7 +621,7 @@ const Location: Template<ExternalApiRenderData> = ({
             <></>
           )}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 md:mt-10">
           {c_availableAmenities ? (
             <Amenities
               title={c_availableAmenities.amenitiesTitle}
@@ -631,7 +631,7 @@ const Location: Template<ExternalApiRenderData> = ({
             <></>
           )}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 md:mt-10">
           <MakeWellPharmacy
             makeWellYourPharmacyTitle={c_makeDmartYourStore?.makeStoreTitle}
             makeWellYourPharmacyDescription={
@@ -673,7 +673,7 @@ const Location: Template<ExternalApiRenderData> = ({
           // c_wellPharmacyServices={c_pharmacyServices}
         />
 
-        <div className="find-more more-location">
+        <div className="find-more all-location more-location">
           <a className="button" href="/index.html">
             View More Locations {svgIcons.ViewMoreLocation}
           </a>

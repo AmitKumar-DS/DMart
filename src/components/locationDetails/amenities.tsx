@@ -12,6 +12,7 @@ const Amenities = (data: props) => {
     <div className="service-sec light-bg services-section">
       <div className="container-custom ">
         <h2 className="sec-title text-center">{title}</h2>
+        <div className="service-inner-wrapper">
         <div className="servicesList">
           {amenities.map((am: any) => {
             return (
@@ -25,6 +26,7 @@ const Amenities = (data: props) => {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </div>

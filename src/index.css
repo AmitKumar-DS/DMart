@@ -1364,16 +1364,16 @@ nhs_pre
 } */
 
 .services-section {
-  @apply text-clip;
+  @apply text-clip last:text-ellipsis;
 }
 /* CSS Added  20/03/2023 */
 
 .amenitites-block {
-  @apply text-ellipsis;
+  @apply text-ellipsis first:text-clip;
 }
 
 /* All services CSS */
 
 .all-services {
-  @apply text-clip;
+  @apply text-clip first:text-ellipsis;
 }
