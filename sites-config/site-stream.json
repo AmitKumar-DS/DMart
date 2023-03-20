@@ -1,7 +1,7 @@
 {
   "$id": "site-entity",
   "filter": {
-    "entityIds": ["global-data"] 
+    "entityIds": ["global-data"]
   },
   "source": "knowledgeGraph",
   "fields": [

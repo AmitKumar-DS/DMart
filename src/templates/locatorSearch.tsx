@@ -19,7 +19,7 @@ import {
   AnswerExperienceConfig,
   slugify,
   AnalyticsEnableDebugging,
-  AnalyticsEnableTrackingCookie
+  AnalyticsEnableTrackingCookie,
 } from "../config/globalConfig";
 import {
   AnalyticsProvider,
@@ -91,9 +91,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   //   ? document._site.c_metaTitle
   //   : "Find your Nearest Well Pharmacy | NHS prescriptions online delivery";
 
-
   return {
-    
     // title: metaTitle,
     charset: "UTF-8",
     viewport:
@@ -240,10 +238,9 @@ const locatorSearch: Template<TemplateRenderProps> = ({
   // const providerOptions: google.maps.MapOptions = {
   //   disableDefaultUI: true,
   // };
-console.log("Sites is",_site);
+  console.log("Sites is", _site);
 
   return (
-
     <>
       {/* <JsonLd<locator>
         item={{
@@ -286,14 +283,14 @@ console.log("Sites is",_site);
             }
             endpoints={AnswerExperienceConfig.endpoints}
           >
-           <SearchLayout
+            <SearchLayout
               userMyLocationBlockMessage={undefined}
               NoLocationsAvailable={undefined}
             />
           </SearchHeadlessProvider>
           <Footer
             footerLogo={_site.c_footerLogo?.footerLogo}
-            footerLinks={_site.c_footermenu?.footerMenu2}            
+            footerLinks={_site.c_footermenu?.footerMenu2}
           />
         </AnalyticsScopeProvider>
       </AnalyticsProvider>
