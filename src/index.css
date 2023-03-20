@@ -1371,3 +1371,9 @@ nhs_pre
 .amenitites-block{
   @apply text-ellipsis;
 }
+
+/* All services CSS */
+
+.all-services{
+  @apply text-clip;
+}
