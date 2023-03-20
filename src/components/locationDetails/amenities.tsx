@@ -9,7 +9,7 @@ const Amenities = (data: props) => {
 console.log("Amenitites",amenities);
 
   return (
-      <div className="service-sec light-bg">
+      <div className="service-sec light-bg services-section">
         <div className="container-custom ">
           <h2 className="sec-title text-center">{title}</h2>
           <div className="servicesList">

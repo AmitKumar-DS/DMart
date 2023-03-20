@@ -1363,3 +1363,6 @@ nhs_pre
  @apply mb-0.5;
 } */
 
+.services-section{
+  @apply text-clip;
+}
