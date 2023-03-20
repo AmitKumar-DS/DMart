@@ -1363,3 +1363,18 @@ nhs_pre
  @apply mb-0.5;
 } */
 
+.services-section{
+  @apply text-clip;
+}
+/* CSS Added  20/03/2023 */
+
+.amenitites-block{
+  @apply text-ellipsis;
+}
+
+/* Added by Prem */
+/* All services CSS */
+
+.all-services{
+  @apply text-clip;
+}
