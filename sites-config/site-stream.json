@@ -1,0 +1,20 @@
+{
+  "$id": "site-entity",
+  "filter": {
+    "entityIds": ["global-data"] 
+  },
+  "source": "knowledgeGraph",
+  "fields": [
+    "c_headerLogo",
+    "c_headerMenu",
+    "c_footermenu",
+    "c_footerLogo",
+    "c_pharmacyServices",
+    "c_bookAnAppointment",
+    "c_aboutDmart"
+  ],
+  "localization": {
+    "locales": ["en"],
+    "primary": false
+  }
+}
