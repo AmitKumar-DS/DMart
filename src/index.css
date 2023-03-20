@@ -1366,3 +1366,8 @@ nhs_pre
 .services-section{
   @apply text-clip;
 }
+/* CSS Added  20/03/2023 */
+
+.amenitites-block{
+  @apply text-ellipsis;
+}
