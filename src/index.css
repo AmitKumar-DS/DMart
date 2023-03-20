@@ -1373,3 +1373,8 @@ nhs_pre
 }
 
 /* Added by Prem */
+/* All services CSS */
+
+.all-services{
+  @apply text-clip;
+}
