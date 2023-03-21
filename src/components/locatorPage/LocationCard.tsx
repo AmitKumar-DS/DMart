@@ -125,11 +125,11 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
    */
   var url = "";
   if (!result.rawData.slug) {
-    let slugString = result.rawData?.id + " " + result.rawData?.name;
+    let slugString = result.rawData?.id ;
     let slug = slugify(slugString);
-    url = `${slug}.html`;
+    url = `${slug}`;
   } else {
-    url = `${result.rawData.slug.toString()}.html`;
+    url = `${result.rawData.slug.toString()}`;
   }
 
   /**

@@ -159,11 +159,11 @@ const NearByLocation = (result: props) => {
                 if (index > 0) {
                   var url = "";
                   if (!e.slug) {
-                    let slugString = e?.id + " " + e?.name;
+                    let slugString = e?.id ;
                     let slug = slugify(slugString);
-                    url = `${slug}.html`;
+                    url = `${slug}`;
                   } else {
-                    url = `${e.slug.toString()}.html`;
+                    url = `${e.slug.toString()}`;
                   }
 
                   var origin: any = null;
