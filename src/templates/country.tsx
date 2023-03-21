@@ -299,9 +299,9 @@ const Country: Template<TemplateRenderProps> = ({
             let detlslug1 = "";
 
             if (!res.slug) {
-              let slugString = res.id + " " + res.name;
+              let slugString = res.id;
               let slug = slugify(slugString);
-              detlslug1 = `${slug}.html`;
+              detlslug1 = `${slug}`;
             } else {
               detlslug1 = `${res.slug.toString()}.html`;
             }
@@ -316,11 +316,13 @@ const Country: Template<TemplateRenderProps> = ({
             res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
 
               if (!detl.slug) {
-                let slugString = detl.id + " " + detl.name;
-                let slug = slugify(slugString);
-                detlslug1 = `${slug}.html`;
+                // let slugString = detl.id + " " + detl.name;
+                // let slug = slugify(slugString);
+                // detlslug1 = `${slug}.html`;
+                detlslug = slug + "/" + entity.slug + ".html";
               } else {
-                detlslug1 = `${detl.slug.toString()}.html`;
+                // detlslug1 = `${detl.slug.toString()}.html`;
+                detlslug = slug + "/" + entity.slug + ".html";
               }
 
               detlslug = detlslug1;

@@ -269,9 +269,9 @@ const State: Template<TemplateRenderProps> = ({
               let detlslug1 = "";
 
               if (!res.slug) {
-                let slugString = res.id + " " + res.name;
+                let slugString = res.id;
                 let slug = slugify(slugString);
-                detlslug1 = `${slug}.html`;
+                detlslug1 = `${slug}`;
               } else {
                 detlslug1 = `${res.slug.toString()}.html`;
               }
