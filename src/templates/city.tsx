@@ -290,7 +290,7 @@ const City: Template<TemplateRenderProps> = ({
     if (entity.meta.entityType.id == "location") {
       let url = "";
       if (!entity.slug) {
-        let slugString = entity.id + " " + entity.name;
+        let slugString = entity.id;
         let slug = slugify(slugString);
         url = `${slug}.html`;
       } else {
