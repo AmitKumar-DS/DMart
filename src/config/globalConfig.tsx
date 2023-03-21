@@ -6,7 +6,7 @@ export const baseApiUrl = "https://liveapi-sandbox.yext.com/v2/accounts/me";
 export const googleMapsApiKey = "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";
 // export const savedFilterId = "54589289";
 export const entityTypes = "location";
-export const BaseUrl = "https://fondly-nutty-goose.pgsdemo.com";
+export const BaseUrl = "https://bwexkeltlw-136073-d.sbx.preview.pagescdn.com";
 //export const BaseUrl = "https://staging-fondly--nutty--goose-pgsdemo-com.preview.pagescdn.com";
 export const googleMapsConfig =  {
     centerLatitude: 26.89490364573428,
