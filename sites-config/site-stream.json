@@ -11,7 +11,8 @@
     "c_footerLogo",
     "c_pharmacyServices",
     "c_bookAnAppointment",
-    "c_aboutDmart"
+    "c_aboutDmart",
+    "c_allAmenities"
   ],
   "localization": {
     "locales": ["en"],
