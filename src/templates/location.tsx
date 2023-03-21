@@ -53,8 +53,12 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-import { BaseUrl, slugify,AnalyticsEnableDebugging,
-  AnalyticsEnableTrackingCookie, } from "../config/globalConfig";
+import {
+  BaseUrl,
+  slugify,
+  AnalyticsEnableDebugging,
+  AnalyticsEnableTrackingCookie,
+} from "../config/globalConfig";
 import Service from "../components/locationDetails/Services";
 import { svgIcons } from "../svg icons/svgIcon";
 
@@ -110,18 +114,18 @@ export const config: TemplateConfig = {
       /*Services Section*/
       // "c_pharmacyServicesTitle",
       // "c_pharmacyServices",
-      // "c_cTAForPharmacyServices", 
+      // "c_cTAForPharmacyServices",
 
       /*FAQ's Section*/
       // "c_frequentlyAskedQuestionsTitle",
       // "c_fAQsDescription",
       // "c_relatedFAQs.question",
       // "c_relatedFAQs.answer",
-      
+
       /*Amenities Section*/
       // "c_amenities",
       // "c_amenitiesTitle",
-       
+
       /*seo*/
       // "c_canonicalURL",
       // "c_metaDescription",
@@ -144,7 +148,7 @@ export const config: TemplateConfig = {
       entityTypes: [entityTypes],
       // savedFilterIds: [savedFilterId],
     },
-    
+
     // The entity language profiles that documents will be generated for.
     localization: {
       locales: [AnswerExperienceConfig.locale],
@@ -160,9 +164,7 @@ export const config: TemplateConfig = {
  * take on the form: featureName/entityId
  */
 
-
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  
   // let url = "";
   // if (!document.slug) {
   //   let slugString = document.id + " " + document.name;
@@ -187,7 +189,7 @@ export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
- document,
+  document,
 }): HeadConfig => {
   let url = "";
   if (!document.slug) {
@@ -197,18 +199,19 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   } else {
     url = `${document.slug.toString()}.html`;
   }
-  let metaDescription =  "document.c_metaDescription"
-  // let metaDescription =  document.c_metaDescription
-  ? document.c_metaDescription
-  : `${document.name} | Get best health services, free prescription deliveries, consultations in ${document.address.city} at Well Pharmacy.`;
-// let metaTitle = document.c_metaTitle
-let metaTitle = "document.c_metaTitle"
-? document.c_metaTitle
-: `${document.name} | Online pharmacy, prescriptions and local chemists UK - Well Pharmacy`;
+  let metaDescription = "document.c_metaDescription"
+    ? // let metaDescription =  document.c_metaDescription
+      document.c_metaDescription
+    : `${document.name} | Get best health services, free prescription deliveries, consultations in ${document.address.city} at Well Pharmacy.`;
+  // let metaTitle = document.c_metaTitle
+  let metaTitle = "document.c_metaTitle"
+    ? document.c_metaTitle
+    : `${document.name} | Online pharmacy, prescriptions and local chemists UK - Well Pharmacy`;
   return {
     title: metaTitle,
     charset: "UTF-8",
-    viewport: "width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=0",
+    viewport:
+      "width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=0",
     tags: [
       {
         type: "meta",
@@ -273,7 +276,6 @@ let metaTitle = "document.c_metaTitle"
         },
       },
       {
-        
         type: "meta",
         attributes: {
           property: "og:url",
@@ -316,7 +318,6 @@ let metaTitle = "document.c_metaTitle"
           name: "twitter:url",
           content: BaseUrl + "/" + url,
         },
-        
       },
       {
         type: "meta",
@@ -471,9 +472,9 @@ const Location: Template<ExternalApiRenderData> = ({
   //     name: document.name,
   //   },
   // });
-  console.log("Site is", _site);
-  console.log("Available Amenities Data is", c_availableAmenities);
-  
+  // console.log("Site is", _site);
+  // console.log("Available Amenities Data is", c_availableAmenities);
+
   return (
     <>
       <JsonLd<Location>
@@ -493,11 +494,11 @@ const Location: Template<ExternalApiRenderData> = ({
             postalCode: address.postalCode,
             addressCountry: address.countryCode,
           },
-          "geo": {
+          geo: {
             "@type": "GeoCoordinates",
             latitude: document?.yextDisplayCoordinate?.latitude,
             longitude: document?.yextDisplayCoordinate?.longitude,
-          },  
+          },
           openingHoursSpecification: hoursSchema,
 
           sameAs: [
@@ -505,8 +506,8 @@ const Location: Template<ExternalApiRenderData> = ({
             WellSocialMediaUrls.twitter,
             WellSocialMediaUrls.instagram,
             WellSocialMediaUrls.linkedin,
-            WellSocialMediaUrls.tiktok
-            ]
+            WellSocialMediaUrls.tiktok,
+          ],
         }}
       />
       {/* <JsonLd<BreadcrumbList>
@@ -549,10 +550,10 @@ const Location: Template<ExternalApiRenderData> = ({
         enableTrackingCookie={AnalyticsEnableTrackingCookie}
       >
         <Header
-            wellLogo={_site.c_headerLogo?.headerLogo}
-            headerLinks={_site.c_headerMenu?.headerMenu}
-            // findPharmacy={_site.c_findAPharmacy}
-          />
+          wellLogo={_site.c_headerLogo?.headerLogo}
+          headerLinks={_site.c_headerMenu?.headerMenu}
+          // findPharmacy={_site.c_findAPharmacy}
+        />
 
         {/* <BreadCrumbs
           name={name}
@@ -620,18 +621,25 @@ const Location: Template<ExternalApiRenderData> = ({
             <></>
           )}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 md:mt-10">
           {c_availableAmenities ? (
-            <Amenities title={c_availableAmenities.amenitiesTitle} amenities={c_availableAmenities.allAmenities} />
+            <Amenities
+              title={c_availableAmenities.amenitiesTitle}
+              amenities={c_availableAmenities.allAmenities}
+            />
           ) : (
             <></>
           )}
         </div>
-         <div className="mt-10">
+        <div className="mt-10 md:mt-10">
           <MakeWellPharmacy
             makeWellYourPharmacyTitle={c_makeDmartYourStore?.makeStoreTitle}
-            makeWellYourPharmacyDescription={c_makeDmartYourStore?.makeStoreDescription}
-            makeWellYourPharmacySpecialities={c_makeDmartYourStore?.dMartSpecialities}
+            makeWellYourPharmacyDescription={
+              c_makeDmartYourStore?.makeStoreDescription
+            }
+            makeWellYourPharmacySpecialities={
+              c_makeDmartYourStore?.dMartSpecialities
+            }
             makeWellYourPharmacyCTA={c_makeDmartYourStore?.makeStoreCTA}
             makeWellYourPharmacyImage={c_makeDmartYourStore?.makeStoreImage}
             NHSLogo={c_makeDmartYourStore?.makeStoreLogo}
@@ -665,15 +673,15 @@ const Location: Template<ExternalApiRenderData> = ({
           // c_wellPharmacyServices={c_pharmacyServices}
         />
 
-        <div className="find-more more-location">
+        <div className="find-more all-location more-location">
           <a className="button" href="/index.html">
             View More Locations {svgIcons.ViewMoreLocation}
           </a>
         </div>
         <Footer
-            footerLogo={_site.c_footerLogo?.footerLogo}
-            footerLinks={_site.c_footermenu?.footerMenu2}            
-          />
+          footerLogo={_site.c_footerLogo?.footerLogo}
+          footerLinks={_site.c_footermenu?.footerMenu2}
+        />
       </AnalyticsProvider>
     </>
   );
