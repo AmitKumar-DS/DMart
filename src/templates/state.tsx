@@ -279,7 +279,7 @@ const State: Template<TemplateRenderProps> = ({
               detlslug = detlslug1;
             });
           } else {
-            detlslug = "gb/" + slug + "/" + entity.slug + ".html";
+            detlslug = "in/" + slug + "/" + entity.slug + ".html";
           }
         }
 
