@@ -1,6 +1,6 @@
 import * as React from "react";
 import BreadCrumbs from "../components/layouts/BreadCrumb";
-import favicon from "../images/favicon.png";
+import favicon from "../images/favicon.ico";
 import hero from "../images/hero.jpg";
 import OpenCloseStatus from "../components/commons/OpenCloseStatus";
 import Address from "../components/commons/Address";
