@@ -1375,5 +1375,5 @@ nhs_pre
 /* All services CSS */
 
 .all-services {
-  @apply text-clip first:text-ellipsis;
+  @apply text-clip first:text-ellipsis last:text-left;
 }
