@@ -359,12 +359,12 @@ const City: Template<TemplateRenderProps> = ({
         headerLinks={_site.c_headerMenu?.headerMenu}
         // findPharmacy={_site.c_findAPharmacy}
       />
-      {/* <BreadCrumbs
+      <BreadCrumbs
         name={name}
         parents={dm_directoryParents}
-        baseUrl={relativePrefixToRoot}
+        // baseUrl={relativePrefixToRoot}
         address={address}
-      ></BreadCrumbs> */}
+      ></BreadCrumbs>
 
       <div className="hero">
         <img className="heroBanner" src={hero} alt="" />

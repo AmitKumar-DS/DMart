@@ -133,11 +133,11 @@ export const config: TemplateConfig = {
       // "c_robotsTag",
 
       /*Directory Manager*/
-      // "dm_directoryParents.id",
-      // "dm_directoryParents.name",
-      // "dm_directoryParents.slug",
-      // "dm_directoryParents.meta.entityType",
-      // "dm_directoryParents.dm_directoryChildrenCount",
+      "dm_directoryParents.id",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug",
+      "dm_directoryParents.meta.entityType",
+      "dm_directoryParents.dm_baseEntityCount",
       // "dm_directoryParents.c_addressRegionDisplayName",
       "c_makeDmartYourStore",
       "c_availableAmenities",
@@ -396,7 +396,7 @@ const Location: Template<ExternalApiRenderData> = ({
     // c_pharmacyServicesTitle,
     // c_cTAForPharmacyServices,
     // c_relatedFAQs,
-    // dm_directoryParents,
+    dm_directoryParents,
     yextDisplayCoordinate,
     timezone,
     geocodedCoordinate,
@@ -555,11 +555,11 @@ const Location: Template<ExternalApiRenderData> = ({
           // findPharmacy={_site.c_findAPharmacy}
         />
 
-        {/* <BreadCrumbs
+        <BreadCrumbs
           name={name}
           parents={dm_directoryParents}
           address={address}
-        ></BreadCrumbs> */}
+        ></BreadCrumbs>
 
         {/* <div className="hero">
           <img
