@@ -413,11 +413,11 @@ const Country: Template<TemplateRenderProps> = ({
           headerLinks={_site.c_headerMenu?.headerMenu}
           // findPharmacy={_site.c_findAPharmacy}
         />
-      {/* <BreadCrumbs
+      <BreadCrumbs
         name={name}
         parents={dm_directoryParents}
         address={address}
-      ></BreadCrumbs> */}
+      ></BreadCrumbs>
 
       <div className="hero">
         <img className="heroBanner" src={hero} alt="" />
