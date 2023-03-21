@@ -238,7 +238,7 @@ const locatorSearch: Template<TemplateRenderProps> = ({
   // const providerOptions: google.maps.MapOptions = {
   //   disableDefaultUI: true,
   // };
-  console.log("Sites is", _site);
+  // console.log("Sites is", _site);
 
   return (
     <>

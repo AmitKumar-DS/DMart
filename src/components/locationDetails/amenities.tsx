@@ -6,7 +6,7 @@ type props = {
 };
 const Amenities = (data: props) => {
   const { amenities, title } = data;
-  console.log("Amenitites", amenities);
+  // console.log("Amenitites", amenities);
 
   return (
     <div className="service-sec light-bg services-section">
