@@ -306,7 +306,7 @@ const Country: Template<TemplateRenderProps> = ({
               detlslug1 = `${res.slug.toString()}.html`;
             }
             if (res.meta.entityType.id == 'ce_city') {
-              detlslug1 = "gb/" + detlslug1;
+              detlslug1 = "in/" + detlslug1;
             } else {
               detlslug1 = detlslug1;
             }
@@ -387,7 +387,7 @@ const Country: Template<TemplateRenderProps> = ({
         cityslug = `${city.slug.toString()}.html`;
       }
       if (city.meta.entityType.id == 'ce_city') {
-        cityslug = "gb/" + cityslug;
+        cityslug = "in/" + cityslug;
       } 
    }
 
