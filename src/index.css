@@ -80,7 +80,7 @@ button:focus-visible {
   @apply outline-none;
 }
 .button {
-  @apply bg-primary-btn-bg-color transform lg:translate-y-1 hover:shadow-[0_10px_14px_-14px_rgba(0,0,0,0.3)] hover:translate-y-0 duration-500 ease-in-out text-sm md:text-base capitalize  text-center font-main-text-font font-medium hover:text-white text-primary-btn-text-color py-1 md:py-2 px-6 lg:px-[1.875rem] leading-6 inline-flex justify-center items-center border border-button-border-color cursor-pointer   hover:border-primary-btn-bg-color rounded-full;
+  @apply bg-primary-btn-bg-color transform lg:translate-y-0.5 hover:shadow-[0_10px_14px_-14px_rgba(0,0,0,0.3)] hover:translate-y-0 duration-500 ease-in-out text-sm md:text-base capitalize  text-center font-main-text-font font-medium hover:text-white text-primary-btn-text-color py-1 md:py-2 px-6 lg:px-[1.875rem] leading-6 inline-flex justify-center items-center border border-button-border-color cursor-pointer   hover:border-primary-btn-bg-color;
 }
 .button.secondary {
   @apply bg-boxed-primary-btn-bg-color text-boxed-primary-btn-text-color hover:bg-primary-btn-bg-color hover:text-white;
@@ -167,7 +167,7 @@ button:focus-visible {
   @apply w-4;
 }
 .breadcrumb ul li a {
-  @apply relative inline-block align-top hover:text-coloured-text-color;
+  @apply relative inline-block align-top hover:text-dMartPrimaryLite;
 }
 .breadcrumb ul li a:hover svg {
   @apply fill-coloured-text-color;
@@ -230,13 +230,16 @@ body .ps:hover .ps__rail-y {
   @apply opacity-100;
 }
 body .ps__rail-y {
-  @apply opacity-100 !bg-scroll-bar w-3 rounded-full;
+  @apply opacity-100 !bg-dMartPrimaryLiteUltra w-3 rounded-full;
 }
 body .ps__thumb-y {
   @apply bg-dMartPrimary opacity-100 right-[0.1875rem] w-1.5;
 }
+body .ps--clicking .ps__thumb-y{
+  @apply !bg-dMartPrimary;
+}
 body .ps__rail-y:hover .ps__thumb-y {
-  @apply w-1.5 bg-dMartPrimary;
+  @apply w-1.5 bg-dMartPrimaryLite;
 }
 
 .result-listing .buttons {
@@ -924,12 +927,13 @@ button.gm-ui-hover-effect span {
   @apply w-1/2 md:w-1/3 lg:w-1/4 px-2 md:px-4 mt-2.5 md:mt-8;
 }
 .servicesList .block .block-content {
-  @apply border border-primary-btn-bg-color flex items-center justify-center  rounded-lg text-sm md:text-xl text-center py-1.5 md:py-3 px-2.5 md:px-5 h-full;
+  @apply border border-primary-btn-bg-color flex items-center justify-center  rounded-lg text-sm md:text-xl text-center py-1.5 md:py-3 px-2.5 md:px-5 h-full hover:scale-[1.03] transition-all duration-500 ease-in-out;
 }
 .servicesList .block .block-content .icon {
   @apply w-6 md:w-8 mr-1.5 md:mr-2.5;
 }
 .servicesList .block .block-content .icon img {
+  filter: contrast(0) sepia(100%) hue-rotate(419deg) brightness(1) saturate(1.28);
   @apply w-auto;
 }
 .note-information {
