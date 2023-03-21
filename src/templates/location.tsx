@@ -673,7 +673,7 @@ const Location: Template<ExternalApiRenderData> = ({
           // c_wellPharmacyServices={c_pharmacyServices}
         />
 
-        <div className="find-more all-location more-location">
+        <div className="find-more all-location more-location all">
           <a className="button" href="/index.html">
             View More Locations {svgIcons.ViewMoreLocation}
           </a>
