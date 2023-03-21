@@ -80,11 +80,11 @@ const Footer = (props: any) => {
             </div>
           </div>
           <hr></hr>
-          <div className="copyright-content">
+          {/* <div className="copyright-content">
             <div
               dangerouslySetInnerHTML={{ __html: footer ? footer : "" }}
             ></div>
-          </div>
+          </div> */}
         </div>
       </div>
       <footer className="footer">
