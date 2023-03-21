@@ -472,8 +472,8 @@ const Location: Template<ExternalApiRenderData> = ({
   //     name: document.name,
   //   },
   // });
-  console.log("Site is", _site);
-  console.log("Available Amenities Data is", c_availableAmenities);
+  // console.log("Site is", _site);
+  // console.log("Available Amenities Data is", c_availableAmenities);
 
   return (
     <>
