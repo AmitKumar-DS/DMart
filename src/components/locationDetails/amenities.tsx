@@ -1,27 +1,28 @@
 import * as React from "react";
 
 type props = {
-  amenities: any;
-  title: any;
+  amenities: any; 
 };
 const Amenities = (data: props) => {
-  const { amenities, title } = data;
+  const {amenities} = data;
   // console.log("Amenitites", amenities);
 
   return (
     <div className="service-sec light-bg services-section">
       <div className="container-custom ">
-        <h2 className="sec-title text-center">{title}</h2>
+        <h2 className="sec-title text-center">All Amenities</h2>
         <div className="service-inner-wrapper">
         <div className="servicesList">
           {amenities.map((am: any) => {
-            return (
+          console.log("am is", am);
+
+            return (              
               <div className="block">
                 <div className="block-content amenitites-block">
                   <div className="icon">
-                    <img src={am?.icon?.url} alt="" title="" />
+                    <img src={am?.amenitiesLogo?.url} alt="" title="" />
                   </div>
-                  {am}
+                  {am?.amenitiesTitle}
                 </div>
               </div>
             );

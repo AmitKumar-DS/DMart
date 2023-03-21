@@ -35,7 +35,7 @@ const MakeWellPharmacy = (props: MakeWell) => {
             <div className="relative container-lg px-12">
               <div className="flex relative flex-wrap flex-col-reverse">
                 <div className="well-card-main">
-                  <div className="plus-icon">{svgIcons.Makewellplusicon}</div>
+                  <div className="plus-icon">{svgIcons.MakewellDMarticon}</div>
                   <div className="well-card-inner">
                     <h2 className="sec-title text-center">
                       {makeWellYourPharmacyTitle}
