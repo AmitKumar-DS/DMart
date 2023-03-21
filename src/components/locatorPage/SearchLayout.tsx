@@ -239,28 +239,28 @@ if(Search.length)
                   optionsContainer: "options"
                 }}
                 inputvalue={inputvalue}
-                searchOnSelect={false}
+                searchOnSelect={true}
                 searchFields={[
                   {
                     entityType: "location",
                     fieldApiName: "name",
                   },
-                  {
-                    entityType: "location",
-                    fieldApiName: "address.line1",
-                  },
-                  {
-                    entityType: "location",
-                    fieldApiName: "address.line2",
-                  },
-                  {
-                    entityType: "location",
-                    fieldApiName: "address.city",
-                  },
-                  {
-                    entityType: "location",
-                    fieldApiName: "address.postalCode",
-                  },
+                  // {
+                  //   entityType: "location",
+                  //   fieldApiName: "address.line1",
+                  // },
+                  // {
+                  //   entityType: "location",
+                  //   fieldApiName: "address.line2",
+                  // },
+                  // {
+                  //   entityType: "location",
+                  //   fieldApiName: "address.city",
+                  // },
+                  // {
+                  //   entityType: "location",
+                  //   fieldApiName: "address.postalCode",
+                  // },
                 ]}
                 handleInputValue={handleInputValue}  
                  handleSetUserShareLocation={handleSetUserShareLocation}

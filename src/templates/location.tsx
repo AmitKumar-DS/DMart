@@ -13,7 +13,7 @@ import NearByLocation from "../components/locationDetails/NearByLocation";
 import { nearByLocation } from "../types/nearByLocation";
 import { fetch } from "@yext/pages/util";
 import hero1 from "../images/LocationBanner.png";
-import favicon from "../images/favicon.png";
+import favicon from "../images/favicon.ico";
 import { JsonLd } from "react-schemaorg";
 import LocationInformation from "../components/locationDetails/LocationInformation";
 import {
@@ -141,6 +141,7 @@ export const config: TemplateConfig = {
       // "dm_directoryParents.c_addressRegionDisplayName",
       "c_makeDmartYourStore",
       "c_availableAmenities",
+      "c_allAmenities",
     ],
 
     // Defines the scope of entities that qualify for this stream.
@@ -472,7 +473,7 @@ const Location: Template<ExternalApiRenderData> = ({
   //     name: document.name,
   //   },
   // });
-  // console.log("Site is", _site);
+  console.log("Site is", _site);
   // console.log("Available Amenities Data is", c_availableAmenities);
 
   return (
@@ -621,16 +622,21 @@ const Location: Template<ExternalApiRenderData> = ({
             <></>
           )}
         </div>
+        {/* {_site?.c_allAmenities.map((amData: any) => {
+          return console.log("data is",amData);
+          
+        })} */}
         <div className="mt-10 md:mt-10">
-          {c_availableAmenities ? (
-            <Amenities
-              title={c_availableAmenities.amenitiesTitle}
-              amenities={c_availableAmenities.allAmenities}
+          {_site?.c_allAmenities ? (
+            
+            <Amenities              
+              amenities={_site?.c_allAmenities}
             />
           ) : (
             <></>
           )}
         </div>
+        
         <div className="mt-10 md:mt-10">
           <MakeWellPharmacy
             makeWellYourPharmacyTitle={c_makeDmartYourStore?.makeStoreTitle}
@@ -673,7 +679,7 @@ const Location: Template<ExternalApiRenderData> = ({
           // c_wellPharmacyServices={c_pharmacyServices}
         />
 
-        <div className="find-more all-location more-location">
+        <div className="find-more all-location more-location all">
           <a className="button" href="/index.html">
             View More Locations {svgIcons.ViewMoreLocation}
           </a>
