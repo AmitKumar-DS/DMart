@@ -92,7 +92,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   //   : "Find your Nearest Well Pharmacy | NHS prescriptions online delivery";
 
   return {
-    // title: metaTitle,
+    title: "DMart",
     charset: "UTF-8",
     viewport:
       "width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=0",
