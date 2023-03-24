@@ -13,8 +13,7 @@ const Amenities = (data: props) => {
         <h2 className="sec-title text-center">All Amenities</h2>
         <div className="service-inner-wrapper">
         <div className="servicesList">
-          {amenities.map((am: any) => {
-          console.log("am is", am);
+          {amenities.map((am: any) => {         
 
             return (              
               <div className="block">

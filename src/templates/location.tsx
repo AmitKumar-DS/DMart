@@ -152,7 +152,7 @@ export const config: TemplateConfig = {
 
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: [AnswerExperienceConfig.locale],
+      locales: ["en","fr"],
       primary: false,
     },
   },
@@ -176,7 +176,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   // }
   // return url;
 
-  return document.id;
+  return document.meta.locale + "/"+ document.id;
 };
 
 /**
@@ -473,7 +473,7 @@ const Location: Template<ExternalApiRenderData> = ({
   //     name: document.name,
   //   },
   // });
-  console.log("Site is", _site);
+  // console.log("Site is", _site);
   // console.log("Available Amenities Data is", c_availableAmenities);
 
   return (
@@ -551,8 +551,8 @@ const Location: Template<ExternalApiRenderData> = ({
         enableTrackingCookie={AnalyticsEnableTrackingCookie}
       >
         <Header
-          wellLogo={_site.c_headerLogo?.headerLogo}
-          headerLinks={_site.c_headerMenu?.headerMenu}
+          wellLogo={_site?.c_headerLogo?.headerLogo}
+          headerLinks={_site?.c_headerMenu?.headerMenu}
           // findPharmacy={_site.c_findAPharmacy}
         />
 
@@ -685,8 +685,8 @@ const Location: Template<ExternalApiRenderData> = ({
           </a>
         </div>
         <Footer
-          footerLogo={_site.c_footerLogo?.footerLogo}
-          footerLinks={_site.c_footermenu?.footerMenu2}
+          footerLogo={_site?.c_footerLogo?.footerLogo}
+          footerLinks={_site?.c_footermenu?.footerMenu2}
         />
       </AnalyticsProvider>
     </>

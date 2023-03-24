@@ -61,7 +61,7 @@ export const config: TemplateConfig = {
       // "c_cookiePolicyDescription"
     ],
     localization: {
-      locales: ["en"],
+      locales: ["en","fr"],
       primary: false,
     },
   },
@@ -72,9 +72,9 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   if (!document.slug) {
     let slugString = document.id + " " + document.name;
     let slug = slugify(slugString);
-    url = `index.html`;
+    url = `${document.meta.locale}/index.html`;
   } else {
-    url = `${document.slug.toString()}.html`;
+    url = `${document.meta.locale}/${document.slug.toString()}.html`;
   }
   return url;
 };
@@ -263,7 +263,7 @@ const locatorSearch: Template<TemplateRenderProps> = ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           <Header
-            wellLogo={_site.c_headerLogo?.headerLogo}
+            wellLogo={_site?.c_headerLogo?.headerLogo}
             headerLinks={_site.c_headerMenu?.headerMenu}
             // findPharmacy={_site.c_findAPharmacy}
           />

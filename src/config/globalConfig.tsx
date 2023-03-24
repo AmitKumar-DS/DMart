@@ -13,7 +13,7 @@ export const googleMapsConfig =  {
     centerLongitude:75.83014255561547,
     googleMapsApiKey: "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18"  
 };  
-export const regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
+export const regionNames = new Intl.DisplayNames(['en','fr'], { type: 'region' })
 export const WellSocialMediaUrls = {
     facebook: "https://www.facebook.com/PharmacyWell/",
     twitter: "https://twitter.com/wellpharmacy",
@@ -44,7 +44,7 @@ export const AnalyticsEnableTrackingCookie  = true;
 
 export const AnswerExperienceConfig =  {
     experienceKey: "search-pharmacy",
-    locale:"en",
+    locale:"en,fr",
     apiKey: "e5795cab51d2066ca0521a73a4a1b1c4",
     verticalKey: "locations",
     experienceVersion: "STAGING",

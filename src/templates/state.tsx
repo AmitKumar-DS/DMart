@@ -296,7 +296,7 @@ const State: Template<TemplateRenderProps> = ({
   return (
     <>
       <Header
-        wellLogo={_site.c_headerLogo?.headerLogo}
+        wellLogo={_site?.c_headerLogo?.headerLogo}
         headerLinks={_site.c_headerMenu?.headerMenu}
         // findPharmacy={_site.c_findAPharmacy}
       />

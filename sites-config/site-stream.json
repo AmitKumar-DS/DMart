@@ -15,7 +15,7 @@
     "c_allAmenities"
   ],
   "localization": {
-    "locales": ["en"],
+    "locales": ["en","fr"],
     "primary": false
   }
 }
