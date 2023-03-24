@@ -16,7 +16,7 @@ import OpenCloseStatus from "..//../components/commons/OpenCloseStatus";
 import Phone from "../commons/phone";
 import { svgIcons } from "../../svg icons/svgIcon";
 import { Data } from "@react-google-maps/api";
-import { slugify, defaultTimeZone  } from "../../config/globalConfig";
+import { slugify, defaultTimeZone, BaseUrl  } from "../../config/globalConfig";
 
 /**
  * 
@@ -143,7 +143,7 @@ console.log("testurl",url);
     >
       <div className="miles-with-title">
         <h3 className="onhighLight">
-          <Link href={`${url}`}>{result.rawData.name} </Link>
+          <Link href={BaseUrl+"/"+url}>{result.rawData.name} </Link>
         </h3>
         <p className="miles">{metersToKms(result.distance ?? 0)} Km</p>
       </div>
@@ -263,7 +263,7 @@ console.log("testurl",url);
           </Link>
         </div>
         <div className="ctaBtn">
-          <Link className="onhighLight button before-icon" href={url}>
+          <Link className="onhighLight button before-icon" href={BaseUrl+"/"+url}>
             {svgIcons.viewdetails}
             View More Info
           </Link>
