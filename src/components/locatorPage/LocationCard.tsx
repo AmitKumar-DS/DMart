@@ -131,7 +131,8 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
   } else {
     url = `${result.rawData.slug.toString()}`;
   }
-
+  
+console.log("testurl",url);
   /**
    * LocationCard component which returns the HTML of Locator Page Listing.
    */
@@ -262,7 +263,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
           </Link>
         </div>
         <div className="ctaBtn">
-          <Link className="onhighLight button before-icon" href={`${url}`}>
+          <Link className="onhighLight button before-icon" href={url}>
             {svgIcons.viewdetails}
             View More Info
           </Link>
