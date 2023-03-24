@@ -176,7 +176,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   // }
   // return url;
 
-  return document.meta.locale + "/"+ document.id;
+  return document.id;
 };
 
 /**
